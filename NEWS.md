@@ -1,8 +1,9 @@
 # Version 2025.8.20
 
+CRAN submission.
+
 ## Documentation
 * Improved pkgdown reference organization by grouping datasets by geographic level
-* Added CLAUDE.md file with development guidance
 
 ## Bug Fixes
 * Fixing Akershus in the 2024 maps

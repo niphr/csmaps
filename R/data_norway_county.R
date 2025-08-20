@@ -99,7 +99,7 @@
 "nor_county_position_geolabels_b2017_default_dt"
 
 ## sf format ----
-#' Maps of Norwegian municipalities in sf format
+#' Maps of Norwegian counties in sf format
 #'
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'

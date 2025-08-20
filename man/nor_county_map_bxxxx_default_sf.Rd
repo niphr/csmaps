@@ -7,7 +7,7 @@
 \alias{nor_county_map_b2020_default_sf}
 \alias{nor_county_map_b2019_default_sf}
 \alias{nor_county_map_b2017_default_sf}
-\title{Maps of Norwegian municipalities in sf format}
+\title{Maps of Norwegian counties in sf format}
 \format{
 \describe{
 \item{geometry}{Multipolygon}

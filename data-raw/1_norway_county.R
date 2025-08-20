@@ -279,6 +279,7 @@ gen_nor_county_map <- function(x_year_end, insert = FALSE, split = FALSE, return
     )
     spdf$navn <- NULL
     spdf_simple <- rgeos::gSimplify(spdf, tol=2000, topologyPreserve = F)
+    # spdf_simple <- sf::st_simplify(spdf, dTolerance=2000, preserveTopology = F)
   }
 
   if(return_sf){

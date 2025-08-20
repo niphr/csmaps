@@ -41,7 +41,7 @@ This is what content the map data contains. Currently we focus on these 2 scopes
 
 This is the geographic granularity, which defines the border of county, municipality and ward.
 
-- County (fylke) is equivalent to [NUTS3](https://ec.europa.eu/eurostat/documents/345175/7451602/2021-NUTS-3-map-NO.pdf) (Nomenclature of Territorial Unit level 3).
+- County (fylke) is equivalent to NUTS3 (Nomenclature of Territorial Unit level 3).
 - Municip (kommune) is equivalent to LAU2 (Local Administrative Unit level 2).
 - Ward (bydel) is an administrative region within a large municipality.
 - xxx: only used for plotting `position_title` (see [example](#norway-layout-insert-oslo)).

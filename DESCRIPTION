@@ -1,6 +1,6 @@
 Package: csmaps
 Title: Preformatted Maps of Norway that Don't Need Geolibraries
-Version: 2025.8.20
+Version: 2025.8.21
 Authors@R: c(
   person(c("Richard","Aubrey"), "White", email = "hello@rwhite.no", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-6747-1726")

@@ -1,3 +1,7 @@
+# Version 2025.8.20
+
+- Fixing Akershus in the 2024 maps
+
 # Version 2023.5.25
 
 - Inclusion of annotate_oslo_nor_map_bxxxx_split_dt, nor_county_position_geolabels_b2024_split_dt, nor_county_position_geolabels_b2020_split_dt.

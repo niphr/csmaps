@@ -1,3 +1,6 @@
+# only run this file ONCE, NEVER AGAIN
+# Akershus got 2 more municipalities
+
 # ***************************** #
 # map default ----
 load("data/nor_county_map_b2024_default_dt.rda")

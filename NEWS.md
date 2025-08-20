@@ -1,6 +1,11 @@
 # Version 2025.8.20
 
-- Fixing Akershus in the 2024 maps
+## Documentation
+* Improved pkgdown reference organization by grouping datasets by geographic level
+* Added CLAUDE.md file with development guidance
+
+## Bug Fixes
+* Fixing Akershus in the 2024 maps
 
 # Version 2023.5.25
 

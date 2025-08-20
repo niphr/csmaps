@@ -3,3 +3,29 @@ url: https://www.csids.no/csmaps/
 template:
   package: csidstemplatepkgdown
 
+reference:
+  - title: County-level maps
+    desc: Maps of Norwegian counties with different layouts and coordinate systems
+    contents:
+      - matches("nor_county_map")
+      - matches("nor_county_position")
+      - annotate_oslo_nor_map_bxxxx_split_dt
+      
+  - title: Municipality-level maps  
+    desc: Maps of Norwegian municipalities with different layouts and coordinate systems
+    contents:
+      - matches("nor_municip_map")
+      - matches("nor_municip_position")
+      
+  - title: Oslo ward maps
+    desc: Detailed maps of Oslo city wards (bydeler)
+    contents:
+      - matches("oslo_ward_map")
+      - matches("oslo_ward_position")
+      
+  - title: Positioning and utilities
+    desc: Helper datasets and functions for map annotations and labels
+    contents:
+      - matches("nor_xxx_position_title")
+      - annotate_oslo_nor_map_bxxxx_split_dt
+

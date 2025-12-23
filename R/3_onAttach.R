@@ -11,6 +11,6 @@
     "csmaps ",
     version,
     "\n",
-    "https://www.csids.no/csmaps/"
+    "https://niphr.github.io/csmaps/"
   ))
 }

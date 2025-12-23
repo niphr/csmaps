@@ -7,8 +7,7 @@ Authors@R: c(
   ),
   person("Chi", "Zhang", email = "andreachizhang@yahoo.com", role = c("aut"), 
     comment = c(ORCID = "0000-0003-0501-5909")
-  ),
-  person("CSIDS", email = "hello@csids.no", role = c("cph"))
+  )
   )
 Description: Provides datasets containing preformatted maps of Norway at
     the county, municipality, and ward (Oslo only) level for redistricting in 
@@ -17,8 +16,8 @@ Description: Provides datasets containing preformatted maps of Norway at
     maps of Norway without any geolibraries.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
-URL: https://www.csids.no/csmaps/, https://github.com/csids/csmaps
-BugReports: https://github.com/csids/csmaps/issues
+URL: https://niphr.github.io/csmaps/, https://github.com/niphr/csmaps
+BugReports: https://github.com/niphr/csmaps/issues
 LazyData: true
 Imports: data.table,
     ggplot2,

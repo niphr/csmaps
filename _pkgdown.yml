@@ -1,7 +1,4 @@
-url: https://www.csids.no/csmaps/
-
-template:
-  package: csidstemplatepkgdown
+url: https://niphr.github.io/csmaps/
 
 reference:
   - title: County-level maps
@@ -10,22 +7,32 @@ reference:
       - matches("nor_county_map")
       - matches("nor_county_position")
       - annotate_oslo_nor_map_bxxxx_split_dt
-      
-  - title: Municipality-level maps  
+
+  - title: Municipality-level maps
     desc: Maps of Norwegian municipalities with different layouts and coordinate systems
     contents:
       - matches("nor_municip_map")
       - matches("nor_municip_position")
-      
+
   - title: Oslo ward maps
     desc: Detailed maps of Oslo city wards (bydeler)
     contents:
       - matches("oslo_ward_map")
       - matches("oslo_ward_position")
-      
+
   - title: Positioning and utilities
     desc: Helper datasets and functions for map annotations and labels
     contents:
       - matches("nor_xxx_position_title")
       - annotate_oslo_nor_map_bxxxx_split_dt
 
+authors:
+  footer:
+    roles: [cre, aut]
+    text: "Crafted by"
+  sidebar:
+    roles: [cre, aut, cph]
+  before: "This package is proudly brought to you by:"
+  after: "See the [changelog](news/index.html) for other contributors. :pray:"
+  Richard Aubrey White:
+    href: "https://www.rwhite.no"

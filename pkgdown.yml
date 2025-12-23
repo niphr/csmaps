@@ -1,12 +1,12 @@
-pandoc: 2.9.2.1
-pkgdown: 2.1.3
+pandoc: 3.1.3
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   csmaps: csmaps.html
   customization: customization.html
   layout: layout.html
   sf_interactive: sf_interactive.html
-last_built: 2025-08-20T19:30Z
+last_built: 2025-12-23T12:43Z
 urls:
-  reference: https://www.csids.no/csmaps/reference
-  article: https://www.csids.no/csmaps/articles
+  reference: https://niphr.github.io/csmaps/reference
+  article: https://niphr.github.io/csmaps/articles

@@ -75,28 +75,105 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
+  <main id="main" class="col-md-9"><div class="cs-hero">
+<div class="cs-hero-body">
+<p class="overline">
+R package · Maps of Norway
+</p>
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="csmaps-">csmaps 
-<a class="anchor" aria-label="anchor" href="#csmaps-"></a>
+<img src="logo.png" class="logo" alt=""><h1>
+Preformatted maps of Norway.
 </h1>
 </div>
-<p><a href="https://cran.r-project.org/package=csmaps" class="external-link"><img src="https://www.r-pkg.org/badges/version/csmaps" alt="CRAN status"></a> <a href="https://cran.r-project.org/package=csmaps" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/csmaps" alt="CRAN downloads"></a></p>
+<div class="cs-rule">
+
+</div>
+<p class="cs-lede">
+Choropleth-ready maps at county, municipality and Oslo-ward level — <em>no geolibraries required.</em> Built for public-health reporting across Norway’s geographic levels.
+</p>
+<p class="cs-cta">
+<a class="cs-btn" href="articles/csmaps.html">Get started</a> <a class="cs-btn-link" href="reference/index.html">Browse the reference →</a>
+</p>
+</div>
+<div class="cs-hero-art">
+<img src="logo.png" alt="csmaps logo">
+</div>
+</div>
+<p class="cs-section">
+Geographic granularities
+</p>
+<div class="cs-cards">
+<div class="cs-card">
+<div class="cs-card-num">
+01
+</div>
+<h3>
+County
+</h3>
+<p>
+All Norwegian counties, in multiple layouts and coordinate systems.
+</p>
+</div>
+<div class="cs-card">
+<div class="cs-card-num">
+02
+</div>
+<h3>
+Municipality
+</h3>
+<p>
+Full municipal maps for the 2024, 2020, 2019 &amp; 2017 redistricting.
+</p>
+</div>
+<div class="cs-card">
+<div class="cs-card-num">
+03
+</div>
+<h3>
+City ward
+</h3>
+<p>
+Detailed Oslo <em>bydeler</em> for fine-grained urban reporting.
+</p>
+</div>
+</div>
+<p class="cs-section">
+Map gallery
+</p>
+<div class="cs-gallery">
+<figure><div class="cs-tile">
+<img src="gallery/county.png" alt="County map of Norway">
+</div>
+<figcaption>
+County · b2024 default
+</figcaption></figure><figure><div class="cs-tile">
+<img src="gallery/municip.png" alt="Municipality map of Norway">
+</div>
+<figcaption>
+Municipality · b2024
+</figcaption></figure><figure><div class="cs-tile">
+<img src="gallery/oslo_ward.png" alt="Oslo ward map">
+</div>
+<figcaption>
+Oslo wards · b2024
+</figcaption></figure>
+</div>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p><a href="https://niphr.github.io/csmaps/">csmaps</a> provides preformatted maps of Norway that generally do not need geolibraries. It helps public health reporting purposes for different geographic levels in Norway.</p>
-<p>The following geographic granularities are included:</p>
-<ul>
-<li><p>County</p></li>
-<li><p>Municipality</p></li>
-<li><p>City ward (only for Oslo)</p></li>
+<p>csmaps provides preformatted maps of Norway that generally do not need geolibraries, for public-health reporting at county, municipality, and Oslo-ward level. It is convenient to visualise maps with additional information, either using text labels or colour palettes.</p>
+<p>Read the introduction vignette <a href="articles/csmaps.html">here</a> or run <code><a href="https://niphr.github.io/csmaps/reference">help(package = "csmaps")</a></code>.</p>
+</div>
+
+  </main><aside class="col-md-3"><div class="install">
+<h2 data-toc-skip>Install</h2>
+<ul class="list-unstyled">
+<li><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"csmaps"</span><span class="op">)</span></span></code></pre></div></li>
 </ul>
-<p>It is convenient to visualize maps with additional information, either using text labels or color palettes.</p>
-<p>Read the introduction vignette <a href="https://niphr.github.io/csmaps/articles/csmaps.html">here</a> or run <code><a href="https://niphr.github.io/csmaps/reference">help(package="csmaps")</a></code>.</p>
 </div>
-</div>
-  </main><aside class="col-md-3"><div class="links">
+
+<div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=csmaps" class="external-link">View on CRAN</a></li>
@@ -113,7 +190,6 @@
 </li>
 </ul>
 </div>
-
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>

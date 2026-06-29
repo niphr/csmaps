@@ -34,5 +34,4 @@ RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyDataCompression: xz
-Config/Needs/website: cstemplate
-Remotes: niphr/cstemplate
+Config/Needs/website: niphr/cstemplate

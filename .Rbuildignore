@@ -11,3 +11,5 @@ license.md
 NULL
 CLAUDE.md
 .claude
+^index\.md$
+^pkgdown$

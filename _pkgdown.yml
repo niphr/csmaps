@@ -3,6 +3,17 @@ url: https://niphr.github.io/csmaps/
 template:
   package: cstemplate
 
+home:
+  sidebar:
+    structure: [install, links, license, citation, authors, dev]
+    components:
+      install:
+        title: Install
+        text: |
+          ```r
+          install.packages("csmaps")
+          ```
+
 reference:
   - title: County-level maps
     desc: Maps of Norwegian counties with different layouts and coordinate systems

@@ -69,7 +69,7 @@ Large geographic datasets stored in `data/` use `.rda` format with `xz` compress
 
 ## Package Documentation
 
-Uses pkgdown for website generation with csidstemplatepkgdown template. Documentation includes:
+Uses pkgdown for website generation with the cstemplate template. Documentation includes:
 - Function reference with runnable examples
 - Vignettes demonstrating map usage and customization
 - Interactive map examples using leaflet

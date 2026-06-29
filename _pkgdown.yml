@@ -1,5 +1,8 @@
 url: https://niphr.github.io/csmaps/
 
+template:
+  package: cstemplate
+
 reference:
   - title: County-level maps
     desc: Maps of Norwegian counties with different layouts and coordinate systems

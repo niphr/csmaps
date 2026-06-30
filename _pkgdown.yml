@@ -2,6 +2,21 @@ url: https://niphr.github.io/csmaps/
 
 template:
   package: cstemplate
+  params:
+    hero:
+      overline: "R package · Maps of Norway"
+      title: "Preformatted maps of Norway."
+      lede: >
+        Choropleth-ready maps at county, municipality and Oslo-ward level —
+        <em>no geolibraries required.</em> Built for public-health reporting
+        across Norway's geographic levels.
+      cta:
+        primary:
+          text: "Get started"
+          href: "articles/csmaps.html"
+        secondary:
+          text: "Browse the reference →"
+          href: "reference/index.html"
 
 home:
   sidebar:

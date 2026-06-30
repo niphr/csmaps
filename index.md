@@ -2,17 +2,6 @@
 title: csmaps
 ---
 
-<div class="cs-hero">
-<div class="cs-hero-body">
-<p class="overline">R package · Maps of Norway</p>
-<h1>Preformatted maps of Norway.</h1>
-<div class="cs-rule"></div>
-<p class="cs-lede">Choropleth-ready maps at county, municipality and Oslo-ward level — <em>no geolibraries required.</em> Built for public-health reporting across Norway's geographic levels.</p>
-<p class="cs-cta"><a class="cs-btn" href="articles/csmaps.html">Get started</a> <a class="cs-btn-link" href="reference/index.html">Browse the reference →</a></p>
-</div>
-<div class="cs-hero-art"><img src="logo.png" alt="csmaps logo" /></div>
-</div>
-
 <p class="cs-section">Geographic granularities</p>
 
 <div class="cs-cards">

@@ -14,6 +14,11 @@ library(data.table)
 library(magrittr)
 ```
 
+This vignette covers colouring regions (either automatically by
+`location_code` or with your own categories), adding labels, and
+enriching a map with outside data such as population figures from
+`csdata`.
+
 ## Colored maps
 
 ### Automatic coloring by `location_code`

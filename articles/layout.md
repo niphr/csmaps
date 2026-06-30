@@ -1,5 +1,9 @@
 # Layout
 
+Every csmaps dataset name follows one consistent pattern, and each
+Norway map comes in a few layouts. This vignette explains the naming
+scheme and then shows what each layout looks like.
+
 ``` r
 library(csmaps)
 #> csmaps 2025.8.21

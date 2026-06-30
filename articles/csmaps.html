@@ -94,10 +94,17 @@ White, Chi Zhang</h4>
 
     
     
-<p><code>csmaps</code> is a package for map visualisation developed by
-members of <a href="https://niphr.github.io" class="external-link">Core Surveillance</a>. The
-package contains map data for Norway at different levels geographic
-granularity and layout.</p>
+<p><code>csmaps</code> ships the geometry of Norway as plain
+<code>data.table</code> objects, so you can draw choropleth maps with
+ggplot2 alone, without <code>sf</code>, GDAL, or any other geo-library.
+It is part of the <a href="https://niphr.github.io" class="external-link">Core
+Surveillance</a> family of R packages, and covers counties,
+municipalities, and Oslo’s city wards across four redistricting years
+(2017, 2019, 2020, and 2024).</p>
+<div class="section level2">
+<h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+</h2>
+<p>Load csmaps alongside ggplot2 and data.table:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://niphr.github.io/csmaps/">csmaps</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; csmaps 2025.8.21</span></span>
@@ -110,20 +117,24 @@ granularity and layout.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     %notin%</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span></span></code></pre></div>
-<p>A map with the default layout can be made in this way. For more
-advanced <em>layout</em> and <em>customization</em>, see the relevant
-documentation vignettes.</p>
+</div>
+<div class="section level2">
+<h2 id="a-first-map">A first map<a class="anchor" aria-label="anchor" href="#a-first-map"></a>
+</h2>
+<p>Every map is a <code>data.table</code> of polygon coordinates, so you
+can hand it straight to <code><a href="https://ggplot2.tidyverse.org/reference/geom_polygon.html" class="external-link">geom_polygon()</a></code>. Here is the
+municipality map for the 2024 borders:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/data.table/man/copy.html" class="external-link">copy</a></span><span class="op">(</span><span class="fu">csmaps</span><span class="fu">::</span><span class="va"><a href="../reference/nor_municip_map_bxxxx_default_dt.html">nor_municip_map_b2024_default_dt</a></span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="va">q</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_polygon.html" class="external-link">geom_polygon</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">pd</span>,</span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">long</span>,</span>
 <span>    y <span class="op">=</span> <span class="va">lat</span>,</span>
 <span>    group <span class="op">=</span> <span class="va">group</span></span>
-<span>  <span class="op">)</span>, </span>
-<span>  color<span class="op">=</span><span class="st">"black"</span>, </span>
+<span>  <span class="op">)</span>,</span>
+<span>  color<span class="op">=</span><span class="st">"black"</span>,</span>
 <span>  fill<span class="op">=</span><span class="st">"white"</span>,</span>
 <span>  linewidth <span class="op">=</span> <span class="fl">0.2</span></span>
 <span><span class="op">)</span></span>
@@ -132,17 +143,18 @@ documentation vignettes.</p>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="va">q</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Default layout"</span><span class="op">)</span></span>
 <span><span class="va">q</span></span></code></pre></div>
 <p><img src="csmaps_files/figure-html/unnamed-chunk-2-1.png" class="r-plt" alt="" width="576"></p>
+<p>The same code draws the counties; only the dataset changes:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/data.table/man/copy.html" class="external-link">copy</a></span><span class="op">(</span><span class="fu">csmaps</span><span class="fu">::</span><span class="va"><a href="../reference/nor_county_map_bxxxx_default_dt.html">nor_county_map_b2024_default_dt</a></span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="va">q</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_polygon.html" class="external-link">geom_polygon</a></span><span class="op">(</span></span>
 <span>  data <span class="op">=</span> <span class="va">pd</span>,</span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">long</span>,</span>
 <span>    y <span class="op">=</span> <span class="va">lat</span>,</span>
 <span>    group <span class="op">=</span> <span class="va">group</span></span>
-<span>  <span class="op">)</span>, </span>
-<span>  color<span class="op">=</span><span class="st">"black"</span>, </span>
+<span>  <span class="op">)</span>,</span>
+<span>  color<span class="op">=</span><span class="st">"black"</span>,</span>
 <span>  fill<span class="op">=</span><span class="st">"white"</span>,</span>
 <span>  linewidth <span class="op">=</span> <span class="fl">0.4</span></span>
 <span><span class="op">)</span></span>
@@ -150,7 +162,15 @@ documentation vignettes.</p>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="va">q</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_map.html" class="external-link">coord_quickmap</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">q</span> <span class="op">&lt;-</span> <span class="va">q</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Default layout"</span><span class="op">)</span></span>
 <span><span class="va">q</span></span></code></pre></div>
-<p><img src="csmaps_files/figure-html/unnamed-chunk-2-2.png" class="r-plt" alt="" width="576"></p>
+<p><img src="csmaps_files/figure-html/unnamed-chunk-3-1.png" class="r-plt" alt="" width="576"></p>
+</div>
+<div class="section level2">
+<h2 id="where-to-next">Where to next<a class="anchor" aria-label="anchor" href="#where-to-next"></a>
+</h2>
+<p>For a split north/south view or an inset that enlarges Oslo, see the
+<em>layout</em> vignette. To shade regions by your own numbers, see
+<em>customization</em>. The full list of datasets lives in the <a href="../reference/index.html">reference</a>.</p>
+</div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>

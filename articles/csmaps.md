@@ -1,8 +1,8 @@
 # Introduction
 
 `csmaps` is a package for map visualisation developed by members of
-[CSIDS](https://www.csids.no). The package contains map data for Norway
-at different levels geographic granularity and layout.
+[Core Surveillance](https://niphr.github.io). The package contains map
+data for Norway at different levels geographic granularity and layout.
 
 ``` r
 library(csmaps)

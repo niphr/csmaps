@@ -10,12 +10,13 @@
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (ward code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{Ward code (e.g. \code{"wardoslo_nor030101"}).}
 #' }
+#' @source Oslo kommune. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -70,15 +71,25 @@
 
 #' Map of Oslo wards (bydeler) in sf format
 #'
+#' We conveniently package map datasets for Oslo wards (bydeler)
+#' (taken from Oslo municipality) as simple features objects, suitable for use
+#' with the \pkg{sf} package and \code{ggplot2::geom_sf()}.
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
 #' Borders provided for 2024, 2020.
 #'
 #' @format
 #' \describe{
-#' \item{geometry}{Multipolygon}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{geometry}{MULTIPOLYGON geometry column (CRS: WGS84 / EPSG:4326).}
+#' \item{location_code}{Ward code (e.g. \code{"wardoslo_nor030101"}).}
 #' }
+#' @source Oslo kommune. License: CC BY 4.0.
+#' @examples
+#' library(ggplot2)
+#' q <- ggplot(csmaps::oslo_ward_map_b2024_default_sf)
+#' q <- q + geom_sf(fill = "white", color = "black", linewidth = 0.4)
+#' q <- q + theme_void()
+#' q
 #' @name oslo_ward_map_bxxxx_default_sf
 "oslo_ward_map_b2020_default_sf"
 

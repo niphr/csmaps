@@ -14,11 +14,11 @@
 \title{Maps of Norwegian counties with an insert for Oslo in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (county code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{County code (e.g. \code{"county_nor03"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 4537 rows and 5 columns.
@@ -34,6 +34,9 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 11 r
 An object of class \code{data.table} (inherits from \code{data.frame}) with 18 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 19 rows and 4 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_county_map_b2024_insert_oslo_dt
@@ -55,7 +58,8 @@ nor_county_position_geolabels_b2017_insert_oslo_dt
 \description{
 We conveniently package map datasets for Norwegian counties
 (taken from Geonorge) that can be used in ggplot2 without needing any geo
-libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+libraries. An inset panel positions Oslo in the lower-left corner for better
+readability. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 }
 \details{
 Borders for 2024, 2020, 2019, and 2017 are provided.

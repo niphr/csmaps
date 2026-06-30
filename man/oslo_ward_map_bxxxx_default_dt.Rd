@@ -10,11 +10,11 @@
 \title{Map of Oslo wards (bydeler) in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (ward code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{Ward code (e.g. \code{"wardoslo_nor030101"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 1372 rows and 5 columns.
@@ -22,6 +22,9 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 1372
 An object of class \code{data.table} (inherits from \code{data.frame}) with 15 rows and 3 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 15 rows and 3 columns.
+}
+\source{
+Oslo kommune. License: CC BY 4.0.
 }
 \usage{
 oslo_ward_map_b2024_default_dt

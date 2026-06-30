@@ -12,12 +12,13 @@
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -81,15 +82,25 @@
 ## sf format ----
 #' Maps of Norwegian municipalities in sf format
 #'
+#' We conveniently package map datasets for Norwegian municipalities
+#' (taken from Geonorge) as simple features objects, suitable for use with the
+#' \pkg{sf} package and \code{ggplot2::geom_sf()}.
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
 #' Borders for 2024, 2020, and 2019 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{geometry}{Multipolygon}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{geometry}{MULTIPOLYGON geometry column (CRS: WGS84 / EPSG:4326).}
+#' \item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
+#' @examples
+#' library(ggplot2)
+#' q <- ggplot(csmaps::nor_municip_map_b2024_default_sf)
+#' q <- q + geom_sf(fill = "white", color = "black", linewidth = 0.2)
+#' q <- q + theme_void()
+#' q
 #' @name nor_municip_map_bxxxx_default_sf
 "nor_municip_map_b2024_default_sf"
 
@@ -106,18 +117,21 @@
 #'
 #' We conveniently package map datasets for Norwegian municipalities
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
-#' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+#' libraries. An inset panel positions Oslo wards in the lower-left corner for
+#' better readability. This data is licensed under Creative Commons BY 4.0
+#' (CC BY 4.0).
 #'
 #' Borders for 2024, 2020, and 2019 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (county code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -203,18 +217,21 @@
 #'
 #' We conveniently package map datasets for Norwegian municipalities
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
-#' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+#' libraries. The split layout repositions Svalbard and Jan Mayen as separate
+#' panels to reduce whitespace. This data is licensed under Creative Commons BY
+#' 4.0 (CC BY 4.0).
 #'
 #' Borders for 2024 and 2020 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)

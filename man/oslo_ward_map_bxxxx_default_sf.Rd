@@ -8,11 +8,14 @@
 \title{Map of Oslo wards (bydeler) in sf format}
 \format{
 \describe{
-\item{geometry}{Multipolygon}
-\item{location_code}{Location code (municipality code).}
+\item{geometry}{MULTIPOLYGON geometry column (CRS: WGS84 / EPSG:4326).}
+\item{location_code}{Ward code (e.g. \code{"wardoslo_nor030101"}).}
 }
 
 An object of class \code{sf} (inherits from \code{data.frame}) with 15 rows and 2 columns.
+}
+\source{
+Oslo kommune. License: CC BY 4.0.
 }
 \usage{
 oslo_ward_map_b2020_default_sf
@@ -20,9 +23,19 @@ oslo_ward_map_b2020_default_sf
 oslo_ward_map_b2024_default_sf
 }
 \description{
+We conveniently package map datasets for Oslo wards (bydeler)
+(taken from Oslo municipality) as simple features objects, suitable for use
+with the \pkg{sf} package and \code{ggplot2::geom_sf()}.
 This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 }
 \details{
 Borders provided for 2024, 2020.
+}
+\examples{
+library(ggplot2)
+q <- ggplot(csmaps::oslo_ward_map_b2024_default_sf)
+q <- q + geom_sf(fill = "white", color = "black", linewidth = 0.4)
+q <- q + theme_void()
+q
 }
 \keyword{datasets}

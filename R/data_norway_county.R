@@ -12,12 +12,13 @@
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{County code (e.g. \code{"county_nor03"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -101,15 +102,25 @@
 ## sf format ----
 #' Maps of Norwegian counties in sf format
 #'
+#' We conveniently package map datasets for Norwegian counties
+#' (taken from Geonorge) as simple features objects, suitable for use with the
+#' \pkg{sf} package and \code{ggplot2::geom_sf()}.
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
 #' Borders for 2024, 2020, 2019, and 2017 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{geometry}{Multipolygon}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{geometry}{MULTIPOLYGON geometry column (CRS: WGS84 / EPSG:4326).}
+#' \item{location_code}{County code (e.g. \code{"county_nor03"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
+#' @examples
+#' library(ggplot2)
+#' q <- ggplot(csmaps::nor_county_map_b2024_default_sf)
+#' q <- q + geom_sf(fill = "white", color = "black", linewidth = 0.4)
+#' q <- q + theme_void()
+#' q
 #' @name nor_county_map_bxxxx_default_sf
 "nor_county_map_b2024_default_sf"
 
@@ -129,18 +140,20 @@
 #'
 #' We conveniently package map datasets for Norwegian counties
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
-#' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+#' libraries. An inset panel positions Oslo in the lower-left corner for better
+#' readability. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
 #' Borders for 2024, 2020, 2019, and 2017 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (county code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{County code (e.g. \code{"county_nor03"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -253,18 +266,21 @@
 #'
 #' We conveniently package map datasets for Norwegian counties
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
-#' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+#' libraries. The split layout repositions Svalbard and Jan Mayen as separate
+#' panels to reduce whitespace. This data is licensed under Creative Commons BY
+#' 4.0 (CC BY 4.0).
 #'
 #' Borders for 2024 and 2020 are provided.
 #'
 #' @format
 #' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
+#' \item{long}{Longitude in decimal degrees (WGS84).}
+#' \item{lat}{Latitude in decimal degrees (WGS84).}
 #' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (municipality code).}
+#' \item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+#' \item{location_code}{County code (e.g. \code{"county_nor03"}).}
 #' }
+#' @source Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 #' @examples
 #' # 2024 borders
 #' library(ggplot2)
@@ -337,6 +353,16 @@
 #' @rdname nor_county_map_bxxxx_split_dt
 "nor_county_position_geolabels_b2020_split_dt"
 
+#' Annotate a split Norwegian map with an Oslo label box
+#'
+#' Returns a list of \code{ggplot2::annotate()} layers that draw a white
+#' rectangle and an "Oslo" text label in the lower-left panel of any
+#' \code{_split_dt} map layout. Add this list to a \pkg{ggplot2} plot with
+#' \code{+}.
+#'
+#' @return A list of two \code{ggplot2} layer objects (a rectangle and a text
+#'   annotation). Add the list directly to a ggplot with \code{+}.
+#'
 #' @rdname nor_county_map_bxxxx_split_dt
 #' @export
 annotate_oslo_nor_map_bxxxx_split_dt <- function(){

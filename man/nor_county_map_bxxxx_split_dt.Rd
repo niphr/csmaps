@@ -11,11 +11,11 @@
 \title{Split map of Norwegian counties in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (municipality code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{County code (e.g. \code{"county_nor03"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 4537 rows and 5 columns.
@@ -23,6 +23,9 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 4537
 An object of class \code{data.table} (inherits from \code{data.frame}) with 15 rows and 4 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 11 rows and 4 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_county_map_b2024_split_dt
@@ -35,10 +38,21 @@ nor_county_position_geolabels_b2020_split_dt
 
 annotate_oslo_nor_map_bxxxx_split_dt()
 }
+\value{
+A list of two \code{ggplot2} layer objects (a rectangle and a text
+  annotation). Add the list directly to a ggplot with \code{+}.
+}
 \description{
 We conveniently package map datasets for Norwegian counties
 (taken from Geonorge) that can be used in ggplot2 without needing any geo
-libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+libraries. The split layout repositions Svalbard and Jan Mayen as separate
+panels to reduce whitespace. This data is licensed under Creative Commons BY
+4.0 (CC BY 4.0).
+
+Returns a list of \code{ggplot2::annotate()} layers that draw a white
+rectangle and an "Oslo" text label in the lower-left panel of any
+\code{_split_dt} map layout. Add this list to a \pkg{ggplot2} plot with
+\code{+}.
 }
 \details{
 Borders for 2024 and 2020 are provided.

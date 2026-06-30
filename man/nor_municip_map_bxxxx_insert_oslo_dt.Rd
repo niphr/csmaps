@@ -12,11 +12,11 @@
 \title{Maps of Norwegian municipalities with an insert for Oslo in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (county code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 30659 rows and 5 columns.
@@ -28,6 +28,9 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 356 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 356 rows and 3 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 422 rows and 3 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_municip_map_b2024_insert_oslo_dt
@@ -45,7 +48,9 @@ nor_municip_position_geolabels_b2019_insert_oslo_dt
 \description{
 We conveniently package map datasets for Norwegian municipalities
 (taken from Geonorge) that can be used in ggplot2 without needing any geo
-libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+libraries. An inset panel positions Oslo wards in the lower-left corner for
+better readability. This data is licensed under Creative Commons BY 4.0
+(CC BY 4.0).
 }
 \details{
 Borders for 2024, 2020, and 2019 are provided.

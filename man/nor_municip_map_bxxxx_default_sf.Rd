@@ -9,13 +9,16 @@
 \title{Maps of Norwegian municipalities in sf format}
 \format{
 \describe{
-\item{geometry}{Multipolygon}
-\item{location_code}{Location code (municipality code).}
+\item{geometry}{MULTIPOLYGON geometry column (CRS: WGS84 / EPSG:4326).}
+\item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 }
 
 An object of class \code{sf} (inherits from \code{data.frame}) with 356 rows and 2 columns.
 
 An object of class \code{sf} (inherits from \code{data.frame}) with 422 rows and 2 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_municip_map_b2024_default_sf
@@ -25,9 +28,19 @@ nor_municip_map_b2020_default_sf
 nor_municip_map_b2019_default_sf
 }
 \description{
+We conveniently package map datasets for Norwegian municipalities
+(taken from Geonorge) as simple features objects, suitable for use with the
+\pkg{sf} package and \code{ggplot2::geom_sf()}.
 This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 }
 \details{
 Borders for 2024, 2020, and 2019 are provided.
+}
+\examples{
+library(ggplot2)
+q <- ggplot(csmaps::nor_municip_map_b2024_default_sf)
+q <- q + geom_sf(fill = "white", color = "black", linewidth = 0.2)
+q <- q + theme_void()
+q
 }
 \keyword{datasets}

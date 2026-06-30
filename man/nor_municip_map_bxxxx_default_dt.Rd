@@ -12,11 +12,11 @@
 \title{Maps of Norwegian municipalities in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (municipality code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 30601 rows and 5 columns.
@@ -28,6 +28,9 @@ An object of class \code{data.table} (inherits from \code{data.frame}) with 356 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 356 rows and 3 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 422 rows and 3 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_municip_map_b2024_default_dt

@@ -8,14 +8,17 @@
 \title{Split map of Norwegian municipalities in data.table format}
 \format{
 \describe{
-\item{long}{Location code.}
-\item{lat}{Location name.}
+\item{long}{Longitude in decimal degrees (WGS84).}
+\item{lat}{Latitude in decimal degrees (WGS84).}
 \item{order}{The order that this line should be plotted in.}
-\item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-\item{location_code}{Location code (municipality code).}
+\item{group}{Polygon group identifier; use as the \code{group} aesthetic in ggplot2.}
+\item{location_code}{Municipality code (e.g. \code{"municip_nor0301"}).}
 }
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 30601 rows and 5 columns.
+}
+\source{
+Kartverket / Geonorge \url{https://www.geonorge.no/}. License: CC BY 4.0.
 }
 \usage{
 nor_municip_map_b2024_split_dt
@@ -25,7 +28,9 @@ nor_municip_map_b2020_split_dt
 \description{
 We conveniently package map datasets for Norwegian municipalities
 (taken from Geonorge) that can be used in ggplot2 without needing any geo
-libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+libraries. The split layout repositions Svalbard and Jan Mayen as separate
+panels to reduce whitespace. This data is licensed under Creative Commons BY
+4.0 (CC BY 4.0).
 }
 \details{
 Borders for 2024 and 2020 are provided.

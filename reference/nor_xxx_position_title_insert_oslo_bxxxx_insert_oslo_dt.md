@@ -1,6 +1,8 @@
-# Position of a title for the Oslo insert
+# Position of the "Oslo" title label for the insert-Oslo map layout
 
-Position of a title for the Oslo insert
+A single-row data.table giving the longitude/latitude coordinates at
+which the "Oslo" text label should be placed when using an
+`_insert_oslo` map dataset.
 
 ## Usage
 
@@ -18,11 +20,11 @@ nor_xxx_position_title_insert_oslo_b2017_insert_oslo_dt
 
 - long:
 
-  Location code.
+  Longitude in decimal degrees (WGS84) for the label anchor.
 
 - lat:
 
-  Location name.
+  Latitude in decimal degrees (WGS84) for the label anchor.
 
 An object of class `data.table` (inherits from `data.frame`) with 1 rows
 and 2 columns.
@@ -32,6 +34,10 @@ and 2 columns.
 
 An object of class `data.table` (inherits from `data.frame`) with 1 rows
 and 2 columns.
+
+## Source
+
+Derived from the insert-Oslo layout coordinates; no external source.
 
 ## Examples
 

@@ -28,11 +28,11 @@ nor_county_position_geolabels_b2017_default_dt
 
 - long:
 
-  Location code.
+  Longitude in decimal degrees (WGS84).
 
 - lat:
 
-  Location name.
+  Latitude in decimal degrees (WGS84).
 
 - order:
 
@@ -40,11 +40,11 @@ nor_county_position_geolabels_b2017_default_dt
 
 - group:
 
-  Needs to be used as 'group' aesthetic in ggplot2.
+  Polygon group identifier; use as the `group` aesthetic in ggplot2.
 
 - location_code:
 
-  Location code (municipality code).
+  County code (e.g. `"county_nor03"`).
 
 An object of class `data.table` (inherits from `data.frame`) with 4479
 rows and 5 columns.
@@ -66,6 +66,10 @@ rows and 4 columns.
 
 An object of class `data.table` (inherits from `data.frame`) with 19
 rows and 4 columns.
+
+## Source
+
+Kartverket / Geonorge <https://www.geonorge.no/>. License: CC BY 4.0.
 
 ## Details
 

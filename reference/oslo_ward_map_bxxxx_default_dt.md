@@ -21,11 +21,11 @@ oslo_ward_position_geolabels_b2020_default_dt
 
 - long:
 
-  Location code.
+  Longitude in decimal degrees (WGS84).
 
 - lat:
 
-  Location name.
+  Latitude in decimal degrees (WGS84).
 
 - order:
 
@@ -33,11 +33,11 @@ oslo_ward_position_geolabels_b2020_default_dt
 
 - group:
 
-  Needs to be used as 'group' aesthetic in ggplot2.
+  Polygon group identifier; use as the `group` aesthetic in ggplot2.
 
 - location_code:
 
-  Location code (ward code).
+  Ward code (e.g. `"wardoslo_nor030101"`).
 
 An object of class `data.table` (inherits from `data.frame`) with 1372
 rows and 5 columns.
@@ -47,6 +47,10 @@ rows and 3 columns.
 
 An object of class `data.table` (inherits from `data.frame`) with 15
 rows and 3 columns.
+
+## Source
+
+Oslo kommune. License: CC BY 4.0.
 
 ## Details
 

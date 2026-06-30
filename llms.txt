@@ -129,7 +129,7 @@ Helper datasets and functions for map annotations and labels
   [`nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt`](https://niphr.github.io/csmaps/reference/nor_xxx_position_title_insert_oslo_bxxxx_insert_oslo_dt.md)
   [`nor_xxx_position_title_insert_oslo_b2019_insert_oslo_dt`](https://niphr.github.io/csmaps/reference/nor_xxx_position_title_insert_oslo_bxxxx_insert_oslo_dt.md)
   [`nor_xxx_position_title_insert_oslo_b2017_insert_oslo_dt`](https://niphr.github.io/csmaps/reference/nor_xxx_position_title_insert_oslo_bxxxx_insert_oslo_dt.md)
-  : Position of a title for the Oslo insert
+  : Position of the "Oslo" title label for the insert-Oslo map layout
 - [`nor_county_map_b2024_split_dt`](https://niphr.github.io/csmaps/reference/nor_county_map_bxxxx_split_dt.md)
   [`nor_county_map_b2020_split_dt`](https://niphr.github.io/csmaps/reference/nor_county_map_bxxxx_split_dt.md)
   [`nor_county_position_geolabels_b2024_split_dt`](https://niphr.github.io/csmaps/reference/nor_county_map_bxxxx_split_dt.md)

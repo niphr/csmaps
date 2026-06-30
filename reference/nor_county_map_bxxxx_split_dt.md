@@ -2,7 +2,15 @@
 
 We conveniently package map datasets for Norwegian counties (taken from
 Geonorge) that can be used in ggplot2 without needing any geo libraries.
-This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
+The split layout repositions Svalbard and Jan Mayen as separate panels
+to reduce whitespace. This data is licensed under Creative Commons BY
+4.0 (CC BY 4.0).
+
+Returns a list of
+[`ggplot2::annotate()`](https://ggplot2.tidyverse.org/reference/annotate.html)
+layers that draw a white rectangle and an "Oslo" text label in the
+lower-left panel of any `_split_dt` map layout. Add this list to a
+ggplot2 plot with `+`.
 
 ## Usage
 
@@ -22,11 +30,11 @@ annotate_oslo_nor_map_bxxxx_split_dt()
 
 - long:
 
-  Location code.
+  Longitude in decimal degrees (WGS84).
 
 - lat:
 
-  Location name.
+  Latitude in decimal degrees (WGS84).
 
 - order:
 
@@ -34,11 +42,11 @@ annotate_oslo_nor_map_bxxxx_split_dt()
 
 - group:
 
-  Needs to be used as 'group' aesthetic in ggplot2.
+  Polygon group identifier; use as the `group` aesthetic in ggplot2.
 
 - location_code:
 
-  Location code (municipality code).
+  County code (e.g. `"county_nor03"`).
 
 An object of class `data.table` (inherits from `data.frame`) with 4537
 rows and 5 columns.
@@ -48,6 +56,15 @@ rows and 4 columns.
 
 An object of class `data.table` (inherits from `data.frame`) with 11
 rows and 4 columns.
+
+## Source
+
+Kartverket / Geonorge <https://www.geonorge.no/>. License: CC BY 4.0.
+
+## Value
+
+A list of two `ggplot2` layer objects (a rectangle and a text
+annotation). Add the list directly to a ggplot with `+`.
 
 ## Details
 

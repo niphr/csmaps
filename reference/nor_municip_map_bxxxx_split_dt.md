@@ -2,8 +2,9 @@
 
 We conveniently package map datasets for Norwegian municipalities (taken
 from Geonorge) that can be used in ggplot2 without needing any geo
-libraries. This data is licensed under Creative Commons BY 4.0 (CC BY
-4.0).
+libraries. The split layout repositions Svalbard and Jan Mayen as
+separate panels to reduce whitespace. This data is licensed under
+Creative Commons BY 4.0 (CC BY 4.0).
 
 ## Usage
 
@@ -17,11 +18,11 @@ nor_municip_map_b2020_split_dt
 
 - long:
 
-  Location code.
+  Longitude in decimal degrees (WGS84).
 
 - lat:
 
-  Location name.
+  Latitude in decimal degrees (WGS84).
 
 - order:
 
@@ -29,14 +30,18 @@ nor_municip_map_b2020_split_dt
 
 - group:
 
-  Needs to be used as 'group' aesthetic in ggplot2.
+  Polygon group identifier; use as the `group` aesthetic in ggplot2.
 
 - location_code:
 
-  Location code (municipality code).
+  Municipality code (e.g. `"municip_nor0301"`).
 
 An object of class `data.table` (inherits from `data.frame`) with 30601
 rows and 5 columns.
+
+## Source
+
+Kartverket / Geonorge <https://www.geonorge.no/>. License: CC BY 4.0.
 
 ## Details
 

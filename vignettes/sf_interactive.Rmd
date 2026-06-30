@@ -26,7 +26,9 @@ library(magrittr)
 
 ## `sf` for interactive maps
 
-We provide the option of how to use `sf` class object to create interactive maps. It requres the `leaflet` package. 
+Every map also ships as an `sf` object, which pairs with the `leaflet` package
+to make interactive, zoomable maps. The example below draws the counties over a
+light background tile.
 
 ```{r fig.height=6, fig.width=6}
 pd_county <- csmaps::nor_county_map_b2024_default_sf

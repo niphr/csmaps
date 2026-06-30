@@ -1,16 +1,3 @@
-# Preformatted maps of Norway.
-
-R package · Maps of Norway
-
-Choropleth-ready maps at county, municipality and Oslo-ward level — *no
-geolibraries required.* Built for public-health reporting across
-Norway’s geographic levels.
-
-[Get started](https://niphr.github.io/csmaps/articles/csmaps.md) [Browse
-the reference →](https://niphr.github.io/csmaps/reference/index.md)
-
-![csmaps logo](logo.png)
-
 Geographic granularities
 
 01

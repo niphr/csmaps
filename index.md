@@ -17,13 +17,3 @@ title: csmaps
 <figure><div class="cs-tile"><img src="gallery/municip.png" alt="Municipality map of Norway" /></div><figcaption>Municipality · b2024</figcaption></figure>
 <figure><div class="cs-tile"><img src="gallery/oslo_ward.png" alt="Oslo ward map" /></div><figcaption>Oslo wards · b2024</figcaption></figure>
 </div>
-
-## Overview
-
-csmaps provides preformatted maps of Norway that generally do not need
-geolibraries, for public-health reporting at county, municipality, and Oslo-ward
-level. It is convenient to visualise maps with additional information, either
-using text labels or colour palettes.
-
-Read the introduction vignette [here](articles/csmaps.html) or run
-`help(package = "csmaps")`.

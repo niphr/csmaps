@@ -31,14 +31,3 @@ Municipality · b2024
 ![Oslo ward map](gallery/oslo_ward.png)
 
 Oslo wards · b2024
-
-## Overview
-
-csmaps provides preformatted maps of Norway that generally do not need
-geolibraries, for public-health reporting at county, municipality, and
-Oslo-ward level. It is convenient to visualise maps with additional
-information, either using text labels or colour palettes.
-
-Read the introduction vignette
-[here](https://niphr.github.io/csmaps/articles/csmaps.md) or run
-[`help(package = "csmaps")`](https://niphr.github.io/csmaps/reference).
